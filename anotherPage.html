@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakhi Surprise</title>
+    <style>
+        /* Resetting default margins and paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #a5daf7; /* Pink background */
+            overflow: hidden;
+        }
+
+        /* Photo Gallery Container */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Photo Frame Styling */
+        .photo-frame {
+            width: 250px;
+            height: 250px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: scaleUp 1s ease-in-out forwards;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleUp {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .photo-frame {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+
+    <div class="photo-gallery">
+        <div class="photo-frame" style="animation-delay: 0.2s;">
+            <img src="Rakhi1.jpeg" alt="Rakhi Image 1">
+        </div>
+        <div class="photo-frame" style="animation-delay: 0.4s;">
+            <img src="Rakhi2.jpeg" alt="Rakhi Image 2">
+        </div>
+        <div class="photo-frame" style="animation-delay: 0.6s;">
+            <img src="Rakhi3.jpeg" alt="Rakhi Image 3">
+        </div>
+        <div class="photo-frame" style="animation-delay: 0.8s;">
+            <img src="Rakhi4.jpeg" alt="Rakhi Image 4">
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
+

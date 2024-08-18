@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #e0f7fa, #b3e5fc, #81d4fa);
+            background-size: 300% 300%;
+            animation: gradientShift 15s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            color: #01579b;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeInDown 2s ease-in-out;
+            color: #f0d963;
+            text-shadow: 2px 2px 8px rgba(0, 87, 156, 0.7);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 3s ease-in-out;
+            line-height: 1.5;
+            color: #22b9eb;
+            text-shadow: 1px 1px 6px rgba(0, 87, 156, 0.2);
+            max-width: 90%;
+        }
+
+        .surprise-button {
+            background: linear-gradient(45deg, #0288d1, #0277bd);
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeIn 4s ease-in-out, pulse 2s infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .surprise-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.25rem;
+                margin-bottom: 25px;
+            }
+            .surprise-button {
+                font-size: 1.4rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            .surprise-button {
+                font-size: 1.2rem;
+                padding: 8px 16px;
+            }
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: floatElement 10s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+            animation-duration: 10s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 2s;
+            animation-duration: 8s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 75%;
+            left: 15%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+
+        .floating-element:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            top: 30%;
+            left: 85%;
+            animation-delay: 6s;
+            animation-duration: 7s;
+        }
+
+        @keyframes floatElement {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>रक्षाबंधन की शुभकामनाएँ</h1>
+    <p>प्रिय बहना <br>
+        अच्छे से पढ़ाई करो अच्छे अंक से 10वीं पास करो। उसके बाद दोनों लोग अच्छे से तैयारी करके साथ में IIT चलेंगे। रक्षाबंधन की हार्दिक शुभकामनाएँ, खुशी, प्यार, और असीम आशीर्वाद के साथ!</p>
+    <button class="surprise-button" onclick="window.location.href='surprise.html';">क्लिक करें!</button>
+
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

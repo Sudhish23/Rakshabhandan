@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Message</title>
+    <style>
+        /* Resetting default margins and paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Background Video Styling */
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: brightness(60%) saturate(120%);
+        }
+
+        /* Text Styling */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            color: #f18989;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            line-height: 1.2;
+            animation: textFadeIn 3s ease-in-out forwards;
+        }
+
+        p {
+            font-size: 2.5rem;
+            margin-top: 1.5rem;
+            animation: textFadeIn 3s ease-in-out forwards;
+        }
+
+        /* Button Styling */
+        .surprise-button {
+            margin-top: 2rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: buttonFadeIn 4s ease-in-out forwards;
+        }
+
+        .surprise-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-color: #ffdf00;
+            transform: scale(1.1);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes textFadeIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes buttonFadeIn {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+            .surprise-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            .surprise-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop>
+        <source src="ROSE_PETAL_Falling_Rose_background_3DMAX__CGGdFuG0fg4_137.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Text Content -->
+    <div class="content">
+        <h1>I trust you, and I always will.</h1>
+        <p>राधे राधे</p>
+        <button class="surprise-button" onclick="window.location.href='anotherPage.html';">Click Here</button>
+    </div>
+
+</body>
+</html>
